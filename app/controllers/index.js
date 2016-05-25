@@ -12,7 +12,7 @@ export default Ember.Controller.extend({
     },
     search(param) {
       if (param !== '') {
-        this.store.query('rental', { city: param }).then((result) => this.set('model', result));
+        this.get('store').query('rental', { city: param }).then((result) => this.set('model', result));
       } else {
         this.get('store').findAll('rental').then((result) => this.set('model', result));
       }
