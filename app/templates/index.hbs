@@ -1,12 +1,7 @@
-<h1>Welcome To Super Rentals</h1>
-
-<p>Test application to learn about Ember</p>
-
-{{filter-listing filteredList=filteredList autoComplete=(action 'autoComplete') search=(action 'search')}}
-
+<div class="jumbotron">
+  <p>Test application to learn about Ember</p>
+  {{filter-listing filteredList=filteredList autoComplete=(action 'autoComplete') search=(action 'search')}}
+</div>
 {{#each model as |rentalUnit|}}
   {{rental-listing rental=rentalUnit}}
 {{/each}}
-
-{{#link-to "about"}}About Us{{/link-to}}
-{{#link-to "contact"}}Contact Us{{/link-to}}
